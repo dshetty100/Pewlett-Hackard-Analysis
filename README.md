@@ -1,7 +1,7 @@
 # Pewlett-Hackard-Analysis
 
 
-## Overview of the analysis: 
+## Overview of the analysis
 The purpose of this analysis is to helps prepare Bobby’s manager for the “silver tsunami” as many current employees at Pewlett-Hackard reach retirement age.
 
 The goal therefore is:
