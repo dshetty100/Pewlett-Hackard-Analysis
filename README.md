@@ -19,9 +19,13 @@ under the Data and Queries folders, respectively.
 The results of the anlysis can be found in the files, retiring_titles.csv and mentorship_eligibilty.csv, under Data 
 folder in  http://github.com/dshetty100/Pewlett-Hackard-Analysis 
 - The table for the number of retiring employees by title from retiring_titles.csv file is shown below.
+![Figure1](/Images/District_Summary.PNG)
+
 - It is observed that there are total 90,398 employess with various titles who will be retiring,
 - The company will need to fill in seven different titles (Senior Engineer, Senior Staff, Engineer, Staff, Technique Leader, Assistant Engineer, and Manager) 
 - The table for employees eligible for the mentorship program from mentorship_eligibility.csv file is shown below.
+![Figure2](/Images/District_Summary.PNG)
+
 - There are 1,464 employees who are eligible for mentorship program.
 
 
