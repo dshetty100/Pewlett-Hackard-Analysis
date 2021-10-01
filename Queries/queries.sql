@@ -85,3 +85,99 @@ AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
 -- Looking at our new table
 SELECT * FROM retirement_info;
+
+DROP TABLE retirement_info;
+
+-- Create new table for retiring employees
+SELECT emp_no, first_name, last_name
+INTO retirement_info
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+-- Check the new table
+SELECT * FROM retirement_info;
+
+-- Using Left Join to Capture retirement-info Table
+-- Joining retirement_info and dept_emp tables
+SELECT retirement_info.emp_no,retirement_info.first_name,retirement_info.last_name,dept_emp.to_date
+FROM retirement_info
+LEFT JOIN dept_emp
+ON retirement_info.emp_no = dept_emp.emp_no;
+
+-- Using alias to write above code
+SELECT ri.emp_no,ri.first_name,ri.last_name,de.to_date
+FROM retirement_info as ri
+LEFT JOIN dept_emp as de
+ON ri.emp_no = de.emp_no;
+
+-- Using Left Join for retirement_info and dept_emp tables to generate current_emp table
+SELECT ri.emp_no,ri.first_name,ri.last_name,de.to_date
+INTO current_emp
+FROM retirement_info as ri
+LEFT JOIN dept_emp as de
+ON ri.emp_no = de.emp_no
+WHERE de.to_date = ('9999-01-01');
+
+-- Check the new table
+SELECT * FROM current_emp;
+
+-- Employee count by department number
+SELECT COUNT(ce.emp_no), de.dept_no
+INTO employee_RET_depart
+FROM current_emp as ce
+LEFT JOIN dept_emp as de
+ON ce.emp_no = de.emp_no
+GROUP BY de.dept_no
+ORDER BY de.dept_no;
+
+SELECT * FROM employee_RET_depart;
+
+-- Salaries table has a to_date column in it. Let's make sure it aligns with the employment date or something else.
+-- We want to know what the most recent date on this list is, 
+SELECT * FROM salaries
+ORDER BY to_date DESC;
+
+-- generating new table (emp_info) with employee information for retiring employee from employee table
+-- & joining with salaries table (also using aliases, e & de, & inner join)
+SELECT e.emp_no, e.first_name, e.last_name, e.gender, s.salary, de.to_date
+INTO emp_info
+FROM employees as e
+INNER JOIN salaries as s
+ON (e.emp_no = s.emp_no)
+-- adding a third join from dept_emp
+INNER JOIN dept_emp as de
+ON (e.emp_no = de.emp_no)
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (e.hire_date BETWEEN '1985-01-01' AND '1988-12-31')
+AND (de.to_date = '9999-01-01');
+
+-- generating new table (manager_info) with employee information for retiring managers from employee table
+-- & joining with sdep_manager table (also using aliases, dm, d, ce & inner join)
+-- List of managers per department
+SELECT  dm.dept_no,
+        d.dept_name,
+        dm.emp_no,
+        ce.last_name,
+        ce.first_name,
+        dm.from_date,
+        dm.to_date
+INTO manager_info
+FROM dept_manager AS dm
+    INNER JOIN departments AS d
+        ON (dm.dept_no = d.dept_no)
+    INNER JOIN current_emp AS ce
+        ON (dm.emp_no = ce.emp_no);
+		
+-- Generating table (dept_info) with the departments added to the current_emp table. 
+SELECT ce.emp_no,ce.first_name,ce.last_name,d.dept_name
+INTO dept_info
+FROM current_emp as ce
+INNER JOIN dept_emp AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no);
+
+-- Generating tailored list (containing everything in the retirement_info table, only 
+-- tailored for the Sales team.)
+
