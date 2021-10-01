@@ -25,7 +25,7 @@ folder in  http://github.com/dshetty100/Pewlett-Hackard-Analysis
 - It is observed that there are total 90,398 employess with various titles who will be retiring,
 - The company will need to fill in seven different titles (Senior Engineer, Senior Staff, Engineer, Staff, Technique Leader, Assistant Engineer, and Manager) 
 - The table for employees eligible for the mentorship program from mentorship_eligibility.csv file is shown below.
-- 
+
 ![Figure2](/Images/mentorship_eligibility.PNG)
 
 - There are 1,464 employees who are eligible for mentorship program.
