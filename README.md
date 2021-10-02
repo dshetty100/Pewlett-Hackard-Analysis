@@ -20,7 +20,9 @@ The results of the anlysis can be found in the files, retiring_titles.csv and me
 folder in  http://github.com/dshetty100/Pewlett-Hackard-Analysis 
 
 - It is observed that there are total 90,398 employess with various titles who will be retiring,
-- The company will need to fill in seven different titles (Senior Engineer, Senior Staff, Engineer, Staff, Technique Leader, Assistant Engineer, and Manager) 
+- The company will need to fill in seven different titles (Senior Engineer, Senior Staff, Engineer, Staff, Technique Leader, Assistant Engineer, and Manager)
+- There are 29,414 senior engineers, 28,254 senior staffs, 14,222 engineers, 12243 staffs, 4,502 technique leaders, 1,761 assistant engineers, and 2 
+  managers due for retirement.
 - There are 1,464 employees who are eligible for mentorship program.
 
 
