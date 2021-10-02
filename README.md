@@ -25,8 +25,10 @@ folder in  http://github.com/dshetty100/Pewlett-Hackard-Analysis
 
 
 ## Summary
-- The table for the number of retiring employees by title from retiring_titles.csv file is shown below.
+- The table for the number of retiring employees by title from retiring_titles.csv file is shown below. There are seven different roles that needs to be filled in. These are Senior Engineer, Senior Staff, Engineer, Staff, Technique Leader, Assistant Engineer, and Manager
+
 ![Figure1](/Images/retiring_titles.PNG)
 
-
+- The table below shows employees that are eligible for the mentorship program. There are 1,464 employees who are eligible for mentorship program. With large number of 
+employees due for retirement, there may not be enough retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees.
 ![Figure2](/Images/mentorship_eligibility.PNG)
