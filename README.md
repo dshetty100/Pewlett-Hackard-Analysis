@@ -21,7 +21,7 @@ Early stage inquiries involved collecting lists of PH employees who where were "
 
 - a summary of the number of retiring employees by their current job title;
 - a list of all employees eligible for a mentorship program designed for retiring staff.
-- 
+
 ## Results
 The results of the anlysis can be found in the files, retiring_titles.csv and mentorship_eligibilty.csv, under Data 
 folder in  http://github.com/dshetty100/Pewlett-Hackard-Analysis 
