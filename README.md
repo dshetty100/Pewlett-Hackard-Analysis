@@ -15,6 +15,13 @@ The analysis was performed using six CSV files that contained all the employee d
 The CSV files and the SQL queries for the analysis can be found at http://github.com/dshetty100/Pewlett-Hackard-Analysis 
 under the Data and Queries folders, respectively.
 
+The starting input for the project were six CSV files. Their column headers and relationships are diagrammed in the ERD (Entity Relationship Diagram) shown above. Once relationships were mapped, databases were created, linked through keys, and the data from the CSVs were imported. Once this was done we were able to begin making queries and isolating useful chunks of information. These query results were then, in turn, exported into their own discrete CSV files for later review.
+
+Early stage inquiries involved collecting lists of PH employees who where were "of retirement age," department managers, and potential retirees from select departments. The end-of-project Challenge section focused on creating two primary query results:
+
+- a summary of the number of retiring employees by their current job title;
+- a list of all employees eligible for a mentorship program designed for retiring staff.
+- 
 ## Results
 The results of the anlysis can be found in the files, retiring_titles.csv and mentorship_eligibilty.csv, under Data 
 folder in  http://github.com/dshetty100/Pewlett-Hackard-Analysis 
